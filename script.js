@@ -1,27 +1,3 @@
-loadjs('http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js', function () {
-    // jquery loaded
-    var courseCount = $('#iframeautoheight')[0].contentWindow.document.getElementById('pjkc').length;
-    for (var k = 1; k <= courseCount; k++) {
-        setTimeout(function () {
-            var random = Math.ceil(Math.random() * 11) + 1;
-            var frame = $($('#iframeautoheight')[0].contentWindow.document);
-            var teacherCount = frame.find('#DataGrid1 .datelisthead').children().length - 3;
-            for (var i = 2; i <= 12; i++) {
-                for (var j = 1; j <= teacherCount; j++) {
-                    var selectId = '#DataGrid1__ctl' + i;
-                    if (j <= 2) {
-                        selectId += '_JS' + j;
-                    } else {
-                        selectId += '_js' + j;
-                    }
-                    frame.find(selectId).get(0).selectedIndex = random == i ? 2 : 1;
-                }
-            }
-            frame.find('#Button1').trigger('click');
-        }, k * 1000);
-    }
-});
-
 // loadjs model
 (function (win, doc) {
     var head = doc.head,
@@ -219,3 +195,28 @@ loadjs('http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js', function () {
     // export
     win.loadjs = loadjs;
 })(window, document);
+
+// do evaluate
+loadjs('http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js', function () {
+    // jquery loaded
+    var courseCount = $('#iframeautoheight')[0].contentWindow.document.getElementById('pjkc').length;
+    for (var k = 1; k <= courseCount; k++) {
+        setTimeout(function () {
+            var random = Math.ceil(Math.random() * 11) + 1;
+            var frame = $($('#iframeautoheight')[0].contentWindow.document);
+            var teacherCount = frame.find('#DataGrid1 .datelisthead').children().length - 3;
+            for (var i = 2; i <= 12; i++) {
+                for (var j = 1; j <= teacherCount; j++) {
+                    var selectId = '#DataGrid1__ctl' + i;
+                    if (j <= 2) {
+                        selectId += '_JS' + j;
+                    } else {
+                        selectId += '_js' + j;
+                    }
+                    frame.find(selectId).get(0).selectedIndex = random == i ? 2 : 1;
+                }
+            }
+            frame.find('#Button1').trigger('click');
+        }, k * 1000);
+    }
+});
