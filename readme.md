@@ -11,7 +11,7 @@
 ```javascript
 var script = document.createElement("script");
 script.type = "text/javascript";
-script.src = 'https://cdn.rawgit.com/troy351/Zhengfang-Evaluation/master/script.min.js';
+script.src = 'https://rawgit.com/troy351/Zhengfang-Evaluation/master/script.min.js';
 document.getElementsByTagName("head")[0].appendChild(script);
 ```
 
