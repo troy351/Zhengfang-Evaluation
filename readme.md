@@ -6,24 +6,13 @@
 ![评价第一门课](https://raw.githubusercontent.com/troy351/Zhengfang-Evaluation/master/images/first_course.jpg)
 * 网页空白处右键选择审查元素(Inspect Element)，切换到控制台(Console)
 ![控制台](https://raw.githubusercontent.com/troy351/Zhengfang-Evaluation/master/images/console.jpg)
-* 复制如下代码（其中第一行courseCount的值为你需要评价的*总课程数*，请自行修改，本例为5门需要评价的课程）
+* 复制如下代码
 
 ```javascript
-var courseCount = 5;
-for (var j = 1; j <= courseCount; j++) {
-    setTimeout(function () {
-        var random = Math.ceil(Math.random() * 11) + 1;
-        var frameDocument = document.getElementById('iframeautoheight').contentWindow.document;
-        for (var i = 2; i <= 12; i++) {
-            frameDocument.getElementById('DataGrid1__ctl' + i + '_JS1').selectedIndex = random == i ? 2 : 1;
-            var ctl2 = frameDocument.getElementById('DataGrid1__ctl' + i + '_JS2');
-            if (ctl2) {
-                ctl2.selectedIndex = random == i ? 2 : 1;
-            }
-        }
-        frameDocument.getElementById('Button1').click();
-    }, j * 1000);
-}
+var script = document.createElement("script");
+script.type = "text/javascript";
+script.src = 'https://cdn.rawgit.com/troy351/Zhengfang-Evaluation/master/script.min.js';
+document.getElementsByTagName("head")[0].appendChild(script);
 ```
 
 * 粘贴到控制台，回车运行（为了适应网页刷新延迟，每提交一门课会等待1s后继续提交下一门课）
