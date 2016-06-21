@@ -11,11 +11,11 @@
 ```javascript
 var script = document.createElement("script");
 script.type = "text/javascript";
-script.src = 'https://rawgit.com/troy351/Zhengfang-Evaluation/master/script.min.js';
+script.src = 'https://rawgit.com/troy351/Zhengfang-Evaluation/master/script.js';
 document.getElementsByTagName("head")[0].appendChild(script);
 ```
 
-* 粘贴到控制台，回车运行（为了适应网页刷新延迟，每提交一门课会等待1s后继续提交下一门课）
+* 粘贴到控制台，回车运行
 ![粘贴脚本并运行](https://raw.githubusercontent.com/troy351/Zhengfang-Evaluation/master/images/script.jpg)
 * 等待一会儿会提示你评价完成，然后点一下“提交”就好啦
 
