@@ -1,6 +1,6 @@
-###背景
+### 背景
 最近登录教务管理系统发现又要进行教学质量评价了，于是乎闲来无事写了个能批量评价的脚本，理论上应该支持所有“正方教务管理系统”。
-###使用方法
+### 使用方法
 * 首先你需要一个现代浏览器 Chrome， Safari， Firefox 均可（或大部分国产浏览器的急速/高速模式，即需要有**审查元素**功能，以Chrome为例，暂未测试IE9+）
 * 登录教务管理系统，点击进入教学质量评价，选中**第一门**需要评价的课程，即如下图界面
 ![评价第一门课](https://raw.githubusercontent.com/troy351/Zhengfang-Evaluation/master/images/first_course.jpg)
